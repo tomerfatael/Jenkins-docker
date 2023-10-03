@@ -1,5 +1,7 @@
 pipeline {
-  agent { dockerfile true } 
+  agent { 
+    docker { image 'arigaio/atlas' }
+  } 
   stages {
     stage('Test') {
       steps {
